@@ -1,0 +1,5 @@
+print(True)
+print(False)
+print(123)
+print( 12 + 1)
+print(123_456_789)
