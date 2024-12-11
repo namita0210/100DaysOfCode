@@ -19,10 +19,18 @@
 
 import random
 
-heads_or_tails = random.randint(0,1)
-print(heads_or_tails)
+# heads_or_tails = random.randint(0,1)
+# print(heads_or_tails)
 
-if heads_or_tails == 1:
-    print("Heads")
-else:
-    print("Tails")    
+# if heads_or_tails == 1:
+#     print("Heads")
+# else:
+#     print("Tails")    
+
+friends = ["Alice", "Bob", "Charlie", "Emanuel", "Chris"]
+
+name_idx = random.randint(0, len(friends)-1)
+
+print(friends[name_idx])
+
+
