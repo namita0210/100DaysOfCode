@@ -48,33 +48,82 @@ import random
 # print(sum) 
 # 
 
-letters = [ 
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
-    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-]
-numbers = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ]
-symbols = [
-    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+',
-    '[', ']', '{', '}', '|', '\\', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/', '`', '~'
-]
+# letters = [ 
+#     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
+#     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+#     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+#     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+# ]
+# numbers = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ]
+# symbols = [
+#     '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+',
+#     '[', ']', '{', '}', '|', '\\', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/', '`', '~'
+# ]
 
-password = ""
-n_chars = int(input("Enter the number of characters you want in your password : "))
-n_symbols = int(input("Enter the number of symbols you want in your password : "))
-n_nums = int(input("Enter the number of digits you want in your password : "))
+# password = ""
+# n_chars = int(input("Enter the number of characters you want in your password : "))
+# n_symbols = int(input("Enter the number of symbols you want in your password : "))
+# n_nums = int(input("Enter the number of digits you want in your password : "))
 
-for i in range(0, n_chars):
-    ch = random.choice(letters)
-    password += ch
+# for i in range(0, n_chars):
+#     ch = random.choice(letters)
+#     password += ch
 
-for i in range(0, n_symbols):
-    ch = random.choice(symbols)
-    password += ch
+# for i in range(0, n_symbols):
+#     ch = random.choice(symbols)
+#     password += ch
 
-for i in range(0, n_nums):
-    ch = random.choice(numbers)    
-    password += ch
+# for i in range(0, n_nums):
+#     ch = random.choice(numbers)    
+#     password += ch
 
-print(f"The password is : {password}")    
+# print(f"The password is : {password}")    
+# def is_letter_in_chosen_word(chosen_word, letter):
+    
+#     for i,letter in enumerate(chosen_word):
+#         if chosen_word[i] == letter:
+#             return i
+#     return -1
+
+# len_chosen_word = len(chosen_word)
+
+# for i in range(len_chosen_word):
+#     user_guess = input("Guess a letter: ")
+#     user_guess.lower()
+#     if is_letter_in_chosen_word(chosen_word, user_guess) != -1:
+#         print("Right")
+#     else:
+#         print("Wrong")    
+
+word_list = ["camel", "baboon", "america"]
+chosen_word = random.choice(word_list)
+print(f" Chosen Word: {chosen_word}")
+
+placeholder = ""
+placeholder = "_"* len(chosen_word)
+
+game_over = False
+correct_letters = []
+while not game_over:
+    
+    guess = input("Enter a guess letter that you think would be there in the chosen word: ").lower()
+    print(f"Guess: {guess}")
+    display = ""
+    
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter  
+            correct_letters.append(guess)
+        elif letter in correct_letters:
+            display+= letter          
+        else:
+            display += "_"
+    print(display) 
+
+    if "_" not in display:
+        game_over=True  
+
+
+
+    
+
