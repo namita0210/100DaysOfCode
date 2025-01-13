@@ -10,7 +10,7 @@ bidders_info = {}
 
 flag = False
 
-enter = int(input("If you want to enter the bidding game press 1 else press 0"))
+enter = int(input("If you want to enter the bidding game press 1 else press 0\n"))
 
 if enter == 1:    
     flag = True 
@@ -27,9 +27,10 @@ while flag is True:
         print("\n" * 50)
     elif should_continue == "no":
         flag = False
+        max_bid,key_req = compare_bids(bidders_info)
+        print(f"The max bid is by {key_req} of the amount: {bidders_info[key_req]}")      
 
-max_bid,key_req = compare_bids(bidders_info)
-print(f"The max bid is by {key_req} of the amount: {bidders_info[key_req]}")      
+
 
 
 
