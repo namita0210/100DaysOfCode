@@ -24,3 +24,17 @@ question_bank = {
     "What kind of movies do you enjoy?": "I enjoy science fiction and thrillers.",
     "What is your favorite drink?": "I love drinking coffee."
 }
+#thisdict = dict(name = "John", age = 36, country = "Norway")
+# print(thisdict)
+# for key in thisdict:
+#     print(thisdict.get(key))
+# X = thisdict.items()
+# print(X)    
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# print(thisdict)
+# thisdict.update({"year": 2020})
+# print(thisdict)
