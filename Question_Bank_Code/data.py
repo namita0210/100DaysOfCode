@@ -24,11 +24,12 @@ question_bank = {
     "What kind of movies do you enjoy?": "I enjoy science fiction and thrillers.",
     "What is your favorite drink?": "I love drinking coffee."
 }
-#thisdict = dict(name = "John", age = 36, country = "Norway")
-# print(thisdict)
-# for key in thisdict:
-#     print(thisdict.get(key))
-# X = thisdict.items()
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+for key in thisdict:
+    print(key)
+    print(thisdict.get(key))
+#X = thisdict.items()
 # print(X)    
 # thisdict = {
 #   "brand": "Ford",
