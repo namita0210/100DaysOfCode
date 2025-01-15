@@ -1,13 +1,15 @@
-from data import question_bank
+from data import question_data
+from model import Question
 
-class Question:
-    def __init__(self, text, ans):
-        self.text = text
-        self.ans = ans
+question_bank = []
 
 #Iterate over question_data
-for key in question_bank:
+for key in question_data:
+    text = key["text"]
+    ans = key["ans"]
     #Create question object from each entry in question_data
-    q_obj = Question(key, val=question_bank.get(key))        
-    #Append each question object to question_bank
+    q_obj = Question(key, ans)        
+    #Append each question object to question_data
     question_bank.append(q_obj)
+
+print(question_bank)    
