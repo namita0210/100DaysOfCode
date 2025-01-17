@@ -1,5 +1,6 @@
 from data import question_data
 from model import Question
+from quiz import Quiz
 
 question_bank = []
 
@@ -12,4 +13,6 @@ for key in question_data:
     #Append each question object to question_data
     question_bank.append(q_obj)
 
-print(question_bank)    
+print(question_bank) 
+
+Quiz(question_bank)
