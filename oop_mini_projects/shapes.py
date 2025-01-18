@@ -8,7 +8,7 @@ colors = ['red','yellow','blue','green','pink','brown','black','grey','silver','
 def create_shape(n_sides):
     angle = 360/n_sides
     for i in range(n_sides):
-        tim.forward(500)
+        tim.forward(100)
         tim.right(angle)
     
 for shape_side in range(3,11):
